@@ -1,16 +1,8 @@
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.common.by import By
 import time
+path = "C:\Program Files\Google\Chrome\Application\chromedriver.exe"
+driver = webdriver.Chrome(path)
 
-urls = [
+driver.get('https://www.google.com.tw/?hl=zh_TW')
 
-    'https://www.jksshop.co/'
-
-]
-s = Service(r"C:\Program Files\Google\Chrome\Application\chromedriver.exe")
-
-for url in urls:
-    driver = webdriver.Chrome(service=s)
-    driver.get(url)
 time.sleep(100)
